@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "functions": {
+    "api/graphql.js": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/graphql",
+      "dest": "/api/graphql.js"
+    }
+  ],
+  "build": {
+    "env": {
+      "YOUR_ENV_VARIABLE": "value" // Add any environment variables here
+    }
+  }
+}
