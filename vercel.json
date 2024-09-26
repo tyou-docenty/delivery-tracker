@@ -14,7 +14,7 @@
   ],
   "build": {
     "env": {
-      "YOUR_ENV_VARIABLE": "value" // Add any environment variables here
+      "YOUR_ENV_VARIABLE": "value"
     }
   }
 }
