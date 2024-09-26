@@ -76,10 +76,8 @@ async function main(): Promise<void> {
   const appContext: AppContext = {
     carrierRegistry,
   };
-  const PORT = process.env.PORT || 3000;
 
   const { url } = await startStandaloneServer(server, {
-    listen: { port: PORT },
     context: async ({ req, res }) => ({
       appContext,
     }),
