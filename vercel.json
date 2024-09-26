@@ -6,17 +6,11 @@
     }
   },
   "buildCommand": "pnpm --filter @delivery-tracker/server build-with-deps",
-  "functions": {
-    "packages/server/dist/index.js": {
-      "memory": 1024,
-      "maxDuration": 10
-    }
-  },
   "routes": [
     {
       "src": "/packages/server",
       "dest": "/packages/server/dist/index.js"
     }
   ],
-  "outputDirectory": "app/packages/server"
+  "outputDirectory": "/packages/server"
 }
