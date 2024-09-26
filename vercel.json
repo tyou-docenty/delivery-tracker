@@ -6,7 +6,7 @@
   "devCommand": "pnpm --filter @delivery-tracker/server start",
   "routes": [
     {
-      "src": "/api/(.*)",
+      "src": "/(.*)",
       "dest": "/packages/server/dist/index.js"
     }
   ],
