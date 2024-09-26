@@ -7,7 +7,7 @@
   },
   "buildCommand": "pnpm --filter @delivery-tracker/server build-with-deps",
   "functions": {
-    "api/index.js": {
+    "packages/server/dist/index.js": {
       "memory": 1024,
       "maxDuration": 10
     }
