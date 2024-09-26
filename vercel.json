@@ -1,22 +1,21 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "dist/index.js",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": ["dist/**"]
-      }
+  "buildCommand": "pnpm --filter @delivery-tracker/server build-with-deps",
+  "outputDirectory": "packages/server/dist",
+  "installCommand": "pnpm install",
+  "devCommand": "pnpm start",
+  "functions": {
+    "packages/server/dist/index.js": {
+      "memory": 1024,
+      "maxDuration": 10
     }
-  ],
+  },
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "dist/index.js"
+      "src": "/api/(.*)",
+      "dest": "/packages/server/dist/index.js"
     }
   ],
-  "installCommand": "pnpm install --frozen-lockfile",
-  "buildCommand": "pnpm run build-with-deps",
   "env": {
     "NODE_ENV": "production"
   }
