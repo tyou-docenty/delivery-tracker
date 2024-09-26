@@ -1,20 +1,13 @@
 {
   "version": 2,
-  "rootDirectory": "packages/server",
-  "buildCommand": "pnpm build-with-deps",
-  "outputDirectory": "dist",
+  "buildCommand": "pnpm --filter @delivery-tracker/server build-with-deps",
+  "outputDirectory": "packages/server/dist",
   "installCommand": "pnpm install",
-  "devCommand": "pnpm start",
-  "functions": {
-    "dist/index.js": {
-      "memory": 1024,
-      "maxDuration": 10
-    }
-  },
+  "devCommand": "pnpm --filter @delivery-tracker/server start",
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/dist/index.js"
+      "dest": "/packages/server/dist/index.js"
     }
   ],
   "env": {
