@@ -2,18 +2,13 @@
   "version": 2,
   "builds": [
     {
-      "src": "packages/server/package.json",
+      "src": "package.json",
       "use": "@vercel/node"
     }
   ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/packages/server/dist/$1"
-    }
-  ],
   "installCommand": "pnpm install --frozen-lockfile",
-  "buildCommand": "pnpm --filter @delivery-tracker/server build-with-deps",
+  "buildCommand": "pnpm run build-with-deps",
+  "startCommand": "pnpm start",
   "env": {
     "NODE_ENV": "production"
   }
