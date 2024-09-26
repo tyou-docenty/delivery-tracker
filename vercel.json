@@ -9,6 +9,12 @@
       }
     }
   ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "src/server.ts"
+    }
+  ],
   "installCommand": "pnpm install --frozen-lockfile",
   "buildCommand": "pnpm run build-with-deps",
   "env": {
