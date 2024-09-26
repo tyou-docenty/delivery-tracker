@@ -16,8 +16,5 @@
   "buildCommand": "pnpm --filter @delivery-tracker/server build-with-deps",
   "env": {
     "NODE_ENV": "production"
-  },
-  "cache": {
-    "paths": ["pnpm-lock.yaml", "node_modules"]
   }
 }
