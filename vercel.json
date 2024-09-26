@@ -2,8 +2,8 @@
   "version": 2,
   "buildCommand": "pnpm --filter @delivery-tracker/server build-with-deps",
   "installCommand": "pnpm install",
-  "command": "pnpm --filter @delivery-tracker/server start",
   "outputDirectory": "packages/server/dist",
+
   "routes": [
     {
       "src": "/(.*)",
