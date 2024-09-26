@@ -1,6 +1,7 @@
 {
   "version": 2,
   "build": {
+    "src": "/packages/server/dist/index.js",
     "env": {
       "NODE_ENV": "production"
     }
