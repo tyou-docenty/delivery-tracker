@@ -3,9 +3,9 @@
   "build": {
     "env": {
       "NODE_ENV": "production"
-    },
-    "command": "pnpm --filter @delivery-tracker/server build-with-deps"
+    }
   },
+  "buildCommand": "pnpm --filter @delivery-tracker/server build-with-deps",
   "functions": {
     "api/index.js": {
       "memory": 1024,
