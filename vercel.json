@@ -14,8 +14,8 @@
   },
   "routes": [
     {
-      "src": "/api",
-      "dest": "/api/index.js"
+      "src": "/packages/server",
+      "dest": "/packages/server/dist/index.js"
     }
   ],
   "outputDirectory": "app/packages/server"
